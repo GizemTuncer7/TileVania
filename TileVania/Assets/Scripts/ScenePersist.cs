@@ -1,15 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class ScenePersist : MonoBehaviour
 {
     private void Awake()
     {
-
         int numScenePersist = FindObjectsOfType<ScenePersist>().Length;
-        if (numScenePersist < 1)
+        if (numScenePersist > 1)
         {
+            Debug.Log("Works");
             Destroy(gameObject);
         }
         else
@@ -19,7 +21,7 @@ public class ScenePersist : MonoBehaviour
     }
     public void ResetScenePersist()
     {
-        
+
         Destroy(gameObject);
     }
 }

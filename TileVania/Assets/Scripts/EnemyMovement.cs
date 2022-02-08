@@ -17,7 +17,7 @@ public class EnemyMovement : MonoBehaviour
     {
         myRigidBody.velocity = new Vector2(moveSpeed, 0f);
     }
-    private void OnTriggerExit2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         moveSpeed = -moveSpeed;
         FlipEnemyFacing();
